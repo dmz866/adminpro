@@ -1,0 +1,22 @@
+<h3>{{ leyenda }}</h3>
+<div class="input-group">
+  <input
+    type="number"
+    min="1"
+    max="100"
+    class="form-control"
+    placeholder="Progreso"
+    [(ngModel)]="progreso"
+    #progresoInput
+    (ngModelChange)="onChange($event)"
+    aria-describedby="button-addon4"
+  />
+  <div class="input-group-append" id="button-addon4">
+    <button class="btn btn-primary" type="button" (click)="cambiarValor(5)">
+      <i class="mdi mdi-plus"></i>
+    </button>
+    <button class="btn btn-primary" type="button" (click)="cambiarValor(-5)">
+      <i class="mdi mdi-minus"></i>
+    </button>
+  </div>
+</div>
